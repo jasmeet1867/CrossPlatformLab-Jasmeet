@@ -3,7 +3,7 @@ name: Multi-OS Testing - Jasmeet Singh
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   test-ubuntu:
