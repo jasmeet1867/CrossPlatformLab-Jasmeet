@@ -1,0 +1,45 @@
+name: Multi-OS Testing - Jasmeet Singh
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  test-ubuntu:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Testing on Ubuntu
+        run: echo "Testing on Ubuntu..."
+
+      - name: Display OS information
+        run: uname -a
+
+      - name: Create Ubuntu file
+        run: echo "Ubuntu test by Jasmeet Singh" > test-ubuntu.txt
+
+      - name: Show file
+        run: cat test-ubuntu.txt
+
+      - name: Complete
+        run: echo "Ubuntu tests completed"
+
+  test-windows:
+    runs-on: windows-latest
+
+    steps:
+      - name: Testing on Windows
+        run: echo "Testing on Windows..."
+
+      - name: Display OS information
+        run: systeminfo
+
+      - name: Create Windows file
+        run: echo "Windows test by Jasmeet Singh" > test-windows.txt
+
+      - name: Show file
+        run: type test-windows.txt
+
+      - name: Complete
+        run: echo "Windows tests completed"
